@@ -16,6 +16,8 @@ fetch("https://api.travis-ci.com/config")
 
     http.createServer(handler).listen(PORT);
 
+    console.log("Server listening on http://localhost:" + PORT);
+
     handler.on("error", err => console.error("Error:", err.message));
     handler.on("failure", event => console.log("Build failed!"));
     handler.on("start", event => console.log("Build started!"));
