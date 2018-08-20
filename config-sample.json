@@ -1,9 +1,7 @@
 {
   "PORT": 8199,
   "PATH": "/webhook/travis",
-  "SCRIPTS": [
-    {
-      "owner/rep#branch": "./paht/to/script.sh"
-    }
-  ]
+  "SCRIPTS": {
+    "owner/rep#branch": "./paht/to/script.sh"
+  }
 }
