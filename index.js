@@ -36,9 +36,9 @@ fetch("https://api.travis-ci.com/config")
         event.payload.branch
       );
 
-      const name = `${payload.repository.owner_name}/${
-        payload.repository.name
-      }#${payload.branch}`;
+      const name = `${event.payload.repository.owner_name}/${
+        event.payload.repository.name
+      }#${event.payload.branch}`;
 
       if (name in SCRIPTS) {
         exec(SCRIPTS[name], (error, stdout, stderr) => {
