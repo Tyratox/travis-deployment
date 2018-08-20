@@ -29,7 +29,7 @@ fetch("https://api.travis-ci.com/config")
 
       const name = `${payload.repository.owner_name}/${
         payload.repository.name
-      }`;
+      }#${payload.branch}`;
 
       if (name in SCRIPTS) {
         exec(SCRIPTS[name], (error, stdout, stderr) => {

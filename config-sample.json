@@ -3,7 +3,7 @@
   "PATH": "/webhook/travis",
   "SCRIPTS": [
     {
-      "owner/rep": "./paht/to/script.sh"
+      "owner/rep#branch": "./paht/to/script.sh"
     }
   ]
 }
