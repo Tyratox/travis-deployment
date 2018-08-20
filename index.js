@@ -8,11 +8,9 @@ const { PORT, SCRIPTS } = require("./config.json");
 fetch("https://api.travis-ci.com/config")
   .then(response => response.json())
   .then(json => {
-    const TRAVIS_PUBLIC_KEY = json.config.notifications.webhook.public_key;
-
     const handler = createTravisHandler({
       path: "/webhook/travis",
-      public_key: travisPublicKey
+      public_key: json.config.notifications.webhook.public_key
     });
 
     http.createServer(handler).listen(PORT);
