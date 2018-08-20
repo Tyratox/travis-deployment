@@ -41,11 +41,12 @@ fetch("https://api.travis-ci.com/config")
       }#${event.payload.branch}`;
 
       if (name in SCRIPTS) {
+        console.log("Executing", SCRIPTS[name]);
         exec(SCRIPTS[name], (error, stdout, stderr) => {
           if (error || stderr) {
-            console.error(error, stderr);
+            console.error("ERROR", error, stderr);
           } else {
-            console.log(stdout);
+            console.log("STDOUT", stdout);
           }
         });
       }
