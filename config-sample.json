@@ -1,0 +1,8 @@
+{
+  "PORT": 8199,
+  "SCRIPTS": [
+    {
+      "owner/rep": "./paht/to/script.sh"
+    }
+  ]
+}

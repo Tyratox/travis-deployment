@@ -1,0 +1,13 @@
+{
+  "name": "node-deployment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tyratox (Nico Hauser)",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "travisci-webhook-handler": "^2.0.0"
+  }
+}
