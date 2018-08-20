@@ -14,7 +14,13 @@ fetch("https://api.travis-ci.com/config")
       public_key: json.config.notifications.webhook.public_key
     });
 
-    http.createServer(handler).listen(PORT);
+    http
+      .createServer((request, response) =>
+        handler(request, response, err => {
+          response.end("Cheating, eh?");
+        })
+      )
+      .listen(PORT);
 
     console.log("Server listening on http://localhost:" + PORT);
 
