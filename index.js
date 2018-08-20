@@ -40,6 +40,8 @@ fetch("https://api.travis-ci.com/config")
         event.payload.repository.name
       }#${event.payload.branch}`;
 
+      console.log("Received webhook for", name);
+
       if (name in SCRIPTS) {
         console.log("Executing", SCRIPTS[name]);
         exec(SCRIPTS[name], (error, stdout, stderr) => {
@@ -49,6 +51,8 @@ fetch("https://api.travis-ci.com/config")
             console.log("STDOUT", stdout);
           }
         });
+      } else {
+        console.log("No corresponding script was found!");
       }
     });
   })
