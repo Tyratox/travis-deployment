@@ -1,5 +1,6 @@
 const http = require("http");
 const exec = require("child_process").exec;
+const fetch = require("node-fetch");
 
 const createTravisHandler = require("travisci-webhook-handler");
 

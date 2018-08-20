@@ -8,6 +8,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "node-fetch": "^2.2.0",
     "travisci-webhook-handler": "^2.0.0"
   }
 }
