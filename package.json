@@ -1,5 +1,5 @@
 {
-  "name": "node-deployment",
+  "name": "travis-deployment",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Tyratox (Nico Hauser)",

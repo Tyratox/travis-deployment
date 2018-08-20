@@ -3,13 +3,13 @@ const exec = require("child_process").exec;
 
 const createTravisHandler = require("travisci-webhook-handler");
 
-const { PORT, SCRIPTS } = require("./config.json");
+const { PORT, PATH, SCRIPTS } = require("./config.json");
 
 fetch("https://api.travis-ci.com/config")
   .then(response => response.json())
   .then(json => {
     const handler = createTravisHandler({
-      path: "/webhook/travis",
+      path: PATH,
       public_key: json.config.notifications.webhook.public_key
     });
 
